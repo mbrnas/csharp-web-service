@@ -21,8 +21,7 @@ namespace BrnasM3.Models
         {
             string json = await new HttpClient().GetStringAsync("http://ist.rit.edu/api/employment/");
             return JsonConvert.DeserializeObject<CoopTableModelView>(json);
-
-            
+            //test
         }
 
     }
