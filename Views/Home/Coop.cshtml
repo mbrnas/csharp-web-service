@@ -1,0 +1,26 @@
+﻿@model BrnasM3.Models.CoopTableModelView;
+
+
+<h1>@Model.CoopTable.Title</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Employer</th>
+            <th>Degree</th>
+            <th>City</th>
+            <th>Term</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coopInfo in Model.CoopTable.coopInformation)
+        {
+            <tr>
+                <td>@coopInfo.Employer</td>
+                <td>@coopInfo.Degree</td>
+                <td>@coopInfo.City</td>
+                <td>@coopInfo.Term</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrnasM3", "BrnasM3.csproj", "{AA2D2E08-722D-441A-827F-E052C8190D5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA2D2E08-722D-441A-827F-E052C8190D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2D2E08-722D-441A-827F-E052C8190D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2D2E08-722D-441A-827F-E052C8190D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2D2E08-722D-441A-827F-E052C8190D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7B2D907-6C99-4BE4-A840-9CDF0AA0BAE2}
+	EndGlobalSection
+EndGlobal
