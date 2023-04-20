@@ -1,0 +1,28 @@
+﻿@model BrnasM3.Models.EmploymentTableModelView;
+
+
+<h1>@Model.EmploymentTable.Title</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Employer</th>
+            <th>Degree</th>
+            <th>City</th>
+            <th>Term</th>
+            <th>Start Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empInfo in Model.EmploymentTable.professionalEmploymentInformation)
+        {
+            <tr>
+                <td>@empInfo.Employer</td>
+                <td>@empInfo.Degree</td>
+                <td>@empInfo.City</td>
+                <td>@empInfo.Title</td>
+                <td>@empInfo.StartDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -4,24 +4,24 @@ using System.Threading.Tasks;
 
 namespace BrnasM3.Models
 {
-    public class CoopTableModel
+    public class EmploymentTableModel
     {
         public string Title { get; set; }
-        public CoopInformation[] coopInformation { get; set; }
+        public EmploymentInformation[] professionalEmploymentInformation { get; set; }
 
-        public class CoopInformation
+        public class EmploymentInformation
         {
             public string Employer { get; set; }
             public string Degree { get; set; }
             public string City { get; set; }
-            public string Term { get; set; }
+            public string Title { get; set; }
+            public string StartDate { get; set; }
         }
 
-        public static async Task<CoopTableModelView> GetCoopTableModelViewAsync()
+        public static async Task<EmploymentTableModelView> GetEmploymentTableModelViewAsync()
         {
             string json = await new HttpClient().GetStringAsync("http://ist.rit.edu/api/employment/");
-            return JsonConvert.DeserializeObject<CoopTableModelView>(json);
+            return JsonConvert.DeserializeObject<EmploymentTableModelView>(json);
         }
-
     }
 }

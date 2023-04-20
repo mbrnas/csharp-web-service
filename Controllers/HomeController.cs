@@ -34,6 +34,11 @@ public class HomeController : Controller
     return View(await CoopTableModel.GetCoopTableModelViewAsync());
 }
 
+    public async Task<IActionResult> Employment()
+    {
+        return View(await EmploymentTableModel.GetEmploymentTableModelViewAsync());
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
