@@ -3,8 +3,8 @@
 </head>
 @model BrnasM3.Models.FacultyModelView
 
-<h1>@Model.title</h1>
-<p>@Model.subTitle</p>
+<h1 class="faculty-titles">@Model.title</h1>
+<p class="faculty-titles">@Model.subTitle</p>
 
 <div class="owl-carousel owl-theme">
     @foreach (var facultyMember in Model.faculty)

@@ -18,10 +18,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public async Task<IActionResult> News()
-    {
-        return View(await NewsModel.GetViewModelAsync());
-    }
 
     public async Task<IActionResult> About()
     {
