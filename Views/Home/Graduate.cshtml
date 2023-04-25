@@ -1,35 +1,41 @@
-﻿@model BrnasM3.Models.GraduateModelView
+﻿<head>
+    <link rel="stylesheet" href="~/css/graduate.css" asp-append-version="true" />
+</head>
+@model BrnasM3.Models.GraduateModelView
 
-<h1>Graduate Programs</h1>
+<h1 class="grad-title">Graduate Programs</h1>
 
 @foreach (var graduateInfo in Model.Graduate)
 {
-    <h2>@graduateInfo.degreeName</h2>
-    @if (!string.IsNullOrEmpty(graduateInfo.title))
-    {
-        <p>@graduateInfo.title</p>
-    }
-    @if (!string.IsNullOrEmpty(graduateInfo.description))
-    {
-        <h4>@graduateInfo.description</h4>
-    }
-    @if (graduateInfo.concentrations != null && graduateInfo.concentrations.Any())
-    {
-        <ul>
-            @foreach (var concentration in graduateInfo.concentrations)
-            {
-                <li>@concentration</li>
-            }
-        </ul>
-    }
-    @if (graduateInfo.availableCertificates != null && graduateInfo.availableCertificates.Any())
-    {
-        <h4>Available Certificates:</h4>
-        <ul>
-            @foreach (var certificate in graduateInfo.availableCertificates)
-            {
-                <li>@certificate</li>
-            }
-        </ul>
-    }
+    <div class="card">
+        <h2>@graduateInfo.degreeName</h2>
+        @if (!string.IsNullOrEmpty(graduateInfo.title))
+        {
+            <p>@graduateInfo.title</p>
+        }
+        @if (!string.IsNullOrEmpty(graduateInfo.description))
+        {
+            <h4>@graduateInfo.description</h4>
+        }
+        @if (graduateInfo.concentrations != null && graduateInfo.concentrations.Any())
+        {
+            <ul>
+                @foreach (var concentration in graduateInfo.concentrations)
+                {
+                    <li>@concentration</li>
+                }
+            </ul>
+        }
+        @if (graduateInfo.availableCertificates != null && graduateInfo.availableCertificates.Any())
+        {
+            <h4>Available Certificates:</h4>
+            <ul>
+                @foreach (var certificate in graduateInfo.availableCertificates)
+                {
+                    <li>@certificate</li>
+                }
+            </ul>
+        }
+    </div>
 }
+

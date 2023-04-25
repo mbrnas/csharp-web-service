@@ -1,15 +1,14 @@
 ﻿@model BrnasM3.Models.EmploymentTableModelView;
 
-
 <h1>@Model.EmploymentTable.Title</h1>
 
-<table>
+<table id="myTable">
     <thead>
         <tr>
             <th>Employer</th>
             <th>Degree</th>
             <th>City</th>
-            <th>Term</th>
+            <th>Title</th>
             <th>Start Date</th>
         </tr>
     </thead>
@@ -26,3 +25,9 @@
         }
     </tbody>
 </table>
+
+@section Scripts {
+    <script>$(document).ready(function () {
+            $('#myTable').DataTable();
+        });</script>
+}

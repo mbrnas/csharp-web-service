@@ -1,6 +1,22 @@
-﻿@model AboutModel
+﻿<head>
+    <link rel="stylesheet" href="~/css/about.css" asp-append-version="true" />
+</head>
 
-<h1>@Model.Title</h1>
-<p>@Model.Description</p>
-<blockquote>@Model.Quote</blockquote>
-<p>@Model.QuoteAuthor</p>
+@model AboutModel
+
+<div id="dialog">
+    <h1 class="dialog-title">@Model.Title</h1>
+    <p class="dialog-description">@Model.Description</p>
+    <blockquote class="dialog-quote">@Model.Quote</blockquote>
+    <p class="dialog-author">@Model.QuoteAuthor</p>
+</div>
+
+@section Scripts {
+    <script>$("#dialog").dialog({
+            draggable: false,
+            width: 1000,
+            active: true,
+            draggable: false,
+            modal: true
+        });</script>
+}

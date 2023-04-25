@@ -1,17 +1,22 @@
-﻿@model BrnasM3.Models.UndergraduateModelView;
+﻿<head>
+    <link rel="stylesheet" href="~/css/undergraduate.css" asp-append-version="true" />
+</head>
+@model BrnasM3.Models.UndergraduateModelView;
 
-<h1>Undergraduate</h1>
+<h1 class="undergrad-title">Undergraduate</h1>
 
 @foreach (var undergradInfo in Model.Undergraduate)
 {
-    <h1>@undergradInfo.degreeName</h1>
-    <p>@undergradInfo.title</p>
-    <h4>@undergradInfo.description</h4>
+    <div class="card">
+        <h1>@undergradInfo.degreeName</h1>
+        <p>@undergradInfo.title</p>
+        <h4>@undergradInfo.description</h4>
 
-    <ul>
-        @foreach (var concentration in undergradInfo.concentrations)
-        {
-            <li>@concentration</li>
-        }
-    </ul>
+        <ul>
+            @foreach (var concentration in undergradInfo.concentrations)
+            {
+                <li>@concentration</li>
+            }
+        </ul>
+    </div>
 }

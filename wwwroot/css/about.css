@@ -1,0 +1,14 @@
+﻿/* Add space between elements */
+#dialog > * {
+    margin-bottom: 10px;
+}
+
+/* Apply color to the title */
+.dialog-title {
+    color: #F76902;
+}
+
+/* Bold the quote author */
+.dialog-author {
+    font-weight: bold;
+}

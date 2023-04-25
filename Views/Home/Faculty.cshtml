@@ -1,31 +1,51 @@
-﻿@model BrnasM3.Models.FacultyModelView
+﻿<head>
+    <link rel="stylesheet" href="~/css/faculty.css" asp-append-version="true" />
+</head>
+@model BrnasM3.Models.FacultyModelView
 
 <h1>@Model.title</h1>
 <p>@Model.subTitle</p>
 
-@foreach (var facultyMember in Model.faculty)
-{
-    <div>
-        <h2>@facultyMember.name</h2>
-        @if (!string.IsNullOrEmpty(facultyMember.title))
-        {
-            <p>@facultyMember.title</p>
-        }
-        @if (!string.IsNullOrEmpty(facultyMember.tagline))
-        {
-            <p>@facultyMember.tagline</p>
-        }
-        <img src="@facultyMember.imagePath" alt="@facultyMember.name">
-        <ul>
-            <li>Username: @facultyMember.username</li>
-            <li>Interest Area: @facultyMember.interestArea</li>
-            <li>Office: @facultyMember.office</li>
-            @if (!string.IsNullOrEmpty(facultyMember.website))
-            {
-                <li>Website: <a href="@facultyMember.website">@facultyMember.website</a></li>
-            }
-            <li>Phone: @facultyMember.phone</li>
-            <li>Email: <a href="mailto:@facultyMember.email">@facultyMember.email</a></li>
-        </ul>
-    </div>
+<div class="owl-carousel owl-theme">
+    @foreach (var facultyMember in Model.faculty)
+    {
+        <div class="item">
+            <div class="faculty-card">
+                <h2>@facultyMember.name</h2>
+                <p>@facultyMember.title</p>
+                <p>@facultyMember.tagline</p>
+                <img src="@facultyMember.imagePath" alt="@facultyMember.name">
+                <ul>
+                    <li>Username: @facultyMember.username</li>
+                    <li>Interest Area: @facultyMember.interestArea</li>
+                    <li>Office: @facultyMember.office</li>
+                    <li>Website: <a href="@facultyMember.website">@facultyMember.website</a></li>
+                    <li>Phone: @facultyMember.phone</li>
+                    <li>Email: <a href="mailto:@facultyMember.email">@facultyMember.email</a></li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>$(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });</script>
 }
+
