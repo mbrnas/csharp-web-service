@@ -1,0 +1,17 @@
+﻿@model BrnasM3.Models.UndergraduateModelView;
+
+<h1>Undergraduate</h1>
+
+@foreach (var undergradInfo in Model.Undergraduate)
+{
+    <h1>@undergradInfo.degreeName</h1>
+    <p>@undergradInfo.title</p>
+    <h4>@undergradInfo.description</h4>
+
+    <ul>
+        @foreach (var concentration in undergradInfo.concentrations)
+        {
+            <li>@concentration</li>
+        }
+    </ul>
+}

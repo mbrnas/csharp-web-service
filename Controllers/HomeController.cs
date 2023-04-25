@@ -39,6 +39,15 @@ public class HomeController : Controller
         return View(await EmploymentTableModel.GetEmploymentTableModelViewAsync());
     }
 
+    public async Task<IActionResult> Undergraduate()
+    {
+        return View(await UndergraduateModel.GetUndergraduateModelViewAsync());
+    }
+
+    public async Task<IActionResult> Graduate()
+    {
+        return View(await GraduateModel.GetGraduateModelViewAsync());
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
