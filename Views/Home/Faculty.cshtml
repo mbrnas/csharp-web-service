@@ -1,0 +1,31 @@
+﻿@model BrnasM3.Models.FacultyModelView
+
+<h1>@Model.title</h1>
+<p>@Model.subTitle</p>
+
+@foreach (var facultyMember in Model.faculty)
+{
+    <div>
+        <h2>@facultyMember.name</h2>
+        @if (!string.IsNullOrEmpty(facultyMember.title))
+        {
+            <p>@facultyMember.title</p>
+        }
+        @if (!string.IsNullOrEmpty(facultyMember.tagline))
+        {
+            <p>@facultyMember.tagline</p>
+        }
+        <img src="@facultyMember.imagePath" alt="@facultyMember.name">
+        <ul>
+            <li>Username: @facultyMember.username</li>
+            <li>Interest Area: @facultyMember.interestArea</li>
+            <li>Office: @facultyMember.office</li>
+            @if (!string.IsNullOrEmpty(facultyMember.website))
+            {
+                <li>Website: <a href="@facultyMember.website">@facultyMember.website</a></li>
+            }
+            <li>Phone: @facultyMember.phone</li>
+            <li>Email: <a href="mailto:@facultyMember.email">@facultyMember.email</a></li>
+        </ul>
+    </div>
+}

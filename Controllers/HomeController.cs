@@ -49,6 +49,11 @@ public class HomeController : Controller
         return View(await GraduateModel.GetGraduateModelViewAsync());
     }
 
+    public async Task<IActionResult> Faculty()
+    {
+        return View(await FacultyModelView.GetFacultyModelViewAsync());
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
