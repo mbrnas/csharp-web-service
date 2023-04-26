@@ -3,6 +3,9 @@ using Newtonsoft.Json;
 
 namespace BrnasM3.Models
 {
+    /// <summary>
+    /// Represents a model for faculty members, that holds their personal information, username, name, tagline, office, image..
+    /// </summary>
     public class FacultyModel
     {
         public string username { get; set; }

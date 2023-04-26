@@ -3,12 +3,12 @@
 }
 
 .card {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    color: black;
     background-color: white;
     padding: 20px;
     margin: 100px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    color: black;
 }
 
     .card h2 {

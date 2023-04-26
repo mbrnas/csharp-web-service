@@ -11,7 +11,7 @@
 
 .faculty-card {
     background-color: white;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     mwidth: 300px;
 }
@@ -23,12 +23,12 @@
     }
 
     .faculty-card h2 {
-        font-size: 24px;
+        font-size: 25px;
         margin: 10px;
     }
 
     .faculty-card p {
-        font-size: 18px;
+        font-size: 20px;
         margin: 10px;
     }
 
@@ -39,8 +39,8 @@
     }
 
     .faculty-card li {
-        font-size: 14px;
-        margin-bottom: 5px;
+        font-size: 15px;
+        margin-bottom: 6px;
     }
 
         .faculty-card li:first-child {
